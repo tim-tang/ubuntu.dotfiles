@@ -1,0 +1,52 @@
+[user]
+	name = tim.tang
+	email = tang.jilong@139.com
+[apply]
+    # Detect whitespace errors when applying a patch
+    whitespace = fix
+[color]
+	branch = auto
+	status = auto
+	interactive = auto
+	diff = auto
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+[diff]
+	prompt = true
+	tool = vimdiff
+	external = git_diff_wrapper.sh
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+[difftool]
+	prompt = true
+[merge]
+	tool = vimdiff
+[pager]
+	diff =
+[alias]
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	st = status
+	ci = commit
+	co = checkout
+	di = diff
+	dc = diff --cached
+	amend = commit --amend
+	aa = add --all
+	ff = merge --ff-only
+	pullff = pull --ff-only
+	noff = merge --no-ff
+	fa = fetch --all
+	pom = push origin master
+	b = branch
+	ds = diff --stat=160,120
+	dh1 = diff HEAD~1
+[mergetool]
+	keepBackup = false
