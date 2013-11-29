@@ -3,3 +3,6 @@ export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/s
 
 # Oracle http proxy settings
 export http_proxy="http://cn-proxy.sg.oracle.com:80"
+
+# SQL-Plus
+export TNS_ADMIN=/opt/oracle

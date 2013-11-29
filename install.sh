@@ -73,6 +73,8 @@ function doSymbolLink(){
 ## - Housekeeping
 function doHouseKeeping(){
     cp -r -f $PWD/gnzh.zsh-theme $HOME/.oh-my-zsh/themes/
+    sudo mkdir -p /opt/oracle
+    sudo cp -r -f tnsnames.ora /opt/oracle/
     source $HOME/.zshrc
     sudo shutdown 0  -r
 }
