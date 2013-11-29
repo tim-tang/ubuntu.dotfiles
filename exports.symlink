@@ -1,0 +1,5 @@
+# Customize to your needs...
+export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+
+# Oracle http proxy settings
+export http_proxy="http://cn-proxy.sg.oracle.com:80"

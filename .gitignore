@@ -4,7 +4,7 @@
 *.out
 *.pid
 *.gz
-
+advcpmv-0.5-8.21-static/
 pids
 logs
 results
