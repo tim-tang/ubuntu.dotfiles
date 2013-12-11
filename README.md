@@ -1,4 +1,7 @@
-Ubuntu.dotfiles
-===============
+ubuntu dotfiles
+---
 
-Dot files for ubuntu.
+## Installation Instructions
+
+    $ ./install.sh
+
