@@ -2,7 +2,7 @@
 # Author: Tim.Tang
 
 ## - Install Git 
-function installGIt(){
+function installGtt(){
     echo "Installing Git."
     yes|sudo apt-get install git-core    
     echo "GIt core successfully installed!"
@@ -97,14 +97,14 @@ echo "Authenticate With GitHub..." && yes|ssh -T git@github.com
 read -p "Are you alright? (y/n) " RESP
 if [ "$RESP" = "y" ]; then
     echo "Glad to hear it!"
-    installGIt()
-    installCoreUtils()
-    installMisc()
-    installMongodb()
-    installNode()
-    installOhMyZsh()
-    doSymbolLink()
-    doHouseKeeping()
+    installGit
+    installCoreUtils
+    installMisc
+    installMongodb
+    installNode
+    installOhMyZsh
+    doSymbolLink
+    doHouseKeeping
 else
     echo "Abort ubuntu dotfiles installation!"
 fi
