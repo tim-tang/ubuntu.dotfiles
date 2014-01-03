@@ -63,7 +63,8 @@ doSymbolLink() {
     echo "Installing symbol links."
     cd -
     # Warning may be not working in bash.
-    for link_file in *.symlink do
+    for link_file in *.symlink 
+    do
         FILENAME=${link_file##*/}
         ln -s -i -v $link_file $HOME/.${FILENAME%.*}
     done
