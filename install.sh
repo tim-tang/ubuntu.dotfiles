@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Author: Tim.Tang
 
 ## - Install Git 
@@ -62,7 +62,6 @@ installOhMyZsh() {
 doSymbolLink() {
     echo "Installing symbol links."
     cd -
-    # Warning may be not working in bash.
     for link_file in *.symlink 
     do
         FILENAME=${link_file##*/}
