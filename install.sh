@@ -55,6 +55,7 @@ installOhMyZsh() {
     yes|sudo apt-get install zsh
     wget --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
     chsh -s $(which zsh)
+    cd -
     echo "Oh-My-Zsh succefully installed!"
 }
 
