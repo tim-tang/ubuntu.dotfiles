@@ -61,8 +61,7 @@ installOhMyZsh() {
 ## - Link dotfiles
 doSymbolLink() {
     echo "Installing symbol links."
-    cd -
-    for link_file in *.symlink 
+    for link_file in $PWD/*.symlink 
     do
         FILENAME=${link_file##*/}
         ln -s -i -v $link_file $HOME/.${FILENAME%.*}
