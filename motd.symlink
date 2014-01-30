@@ -1,0 +1,21 @@
+# the hacking msg
+echo
+echo "  ___ ___                   __    .__                   .___   __"
+echo " /   |   \ _____     ____  |  | __|__|  ____     ____   |   |_/  |_"
+echo "/    ~    \\__   \  _/ ___\ |  |/ /|  | /    \   / ___\  |   |\   __\\"
+echo "\    Y    / / __ \_\  \___ |    < |  ||   |  \ / /_/  > |   | |  |"
+echo " \___|_  / (____  / \___  >|__|_ \|__||___|  / \___  /  |___| |__|   /\\"
+echo "       \/       \/      \/      \/         \/ /_____/                \/"
+echo
+
+# landscape-sysinfo if installed
+if [ -x /usr/bin/landscape-sysinfo ]; then
+        cores=$(grep -c "^processor" /proc/cpuinfo 2>/dev/null)
+        [ "$cores" -eq "0" ] && cores=1
+        threshold="${cores:-1}.0"
+        if [ $(echo "`cut -f1 -d ' ' /proc/loadavg` < $threshold" | bc) -eq 1 ]; then
+            /usr/bin/landscape-sysinfo | grep -v "Graph this data and manage"
+        else
+            echo " System information disabled due to load higher than $threshold"
+        fi
+fi
